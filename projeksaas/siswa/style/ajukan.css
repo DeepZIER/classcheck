@@ -1,0 +1,223 @@
+/* Container utama */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+/* Card barang */
+
+.barang-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 230px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.barang-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gambar barang */
+
+.barang-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Judul */
+
+.barang-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+/* Detail */
+
+.barang-card p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Tombol pinjam */
+
+.toggle-form-btn {
+  margin-top: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 90%;
+  margin-left: 10px;
+}
+
+.toggle-form-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Container form peminjaman */
+
+.form-container {
+  margin-top: 12px;
+  display: none;
+  text-align: left;
+}
+
+.form-container.show {
+  display: block;
+}
+
+/* Input dalam form */
+
+.form-container input,
+.form-container select,
+.form-container button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Tombol submit form */
+
+.form-container button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #27ae60;
+}
+
+/* Stok habis */
+
+.stok-habis {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Countdown badge */
+
+.countdown {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+/* Tombol status 'Meminjam' */
+
+.status-meminjam {
+  background-color: #f1c40f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: not-allowed;
+}
+
+#formModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#formModal.hidden {
+  display: none;
+}
+
+#formModal .modal-content {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#formModal .modal-content h3 {
+  margin-bottom: 16px;
+}
+
+#formModal .modal-content input,
+#formModal .modal-content button {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#formModal .modal-content button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+#formModal .modal-content button:hover {
+  background-color: #0056b3;
+}
+
+#formModal .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 6px solid #f44336;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: fadeIn 0.4s ease;
+  position: absolute;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    display: none;
+  }
+}

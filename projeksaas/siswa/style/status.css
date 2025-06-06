@@ -1,0 +1,107 @@
+.status-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.filter-btn.active {
+  background-color: #314161;
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #eee;
+  border-radius: 20px;
+  box-shadow: 0px 5px 25px 2px #d4d4d4;
+  padding: 50px;
+  justify-content: center;
+  width: 68rem;
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: calc(21% - 20px);
+  /* 4 card per baris */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card-info {
+  text-align: left;
+  width: 100%;
+}
+
+.card-info h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.card-info p {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.countdown {
+  font-weight: bold;
+  color: #ff5722;
+  font-size: 13px;
+}
+
+/* Warna status */
+
+.status-menunggu {
+  border-left: 5px solid orange;
+}
+
+.status-dipinjam {
+  border-left: 5px solid #007bff;
+}
+
+.status-ditolak {
+  border-left: 5px solid crimson;
+}
+
+.status-dikembalikan {
+  border-left: 5px solid green;
+}
+
+/* Responsive 2 kolom untuk mobile */
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(10% - 20px);
+    /* 2 card per baris */
+  }
+}

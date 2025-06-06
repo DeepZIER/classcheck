@@ -1,0 +1,45 @@
+.table-barang {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-barang th {
+  background-color: #314161;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.table-barang td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.status-dipinjam {
+  background-color: #28a745;
+}
+
+.status-ditolak {
+  background-color: #dc3545;
+}
+
+.status-dikembalikan {
+  background-color: #007bff;
+}
